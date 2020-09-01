@@ -7,6 +7,10 @@
 			<?php
 				echo $module->get_setting( 'cite_font' )->form();
 				echo $module->get_setting( 'cite_font_size' )->form();
+			?>
+		</div>
+		<div class="sv_setting_flex">
+			<?php
 				echo $module->get_setting( 'cite_line_height' )->form();
 				echo $module->get_setting( 'cite_text_color' )->form();
 			?>
