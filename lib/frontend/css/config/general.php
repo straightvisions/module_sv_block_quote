@@ -13,7 +13,7 @@
 	);
 
 echo $_s->build_css(
-	is_admin() ? '.editor-styles-wrapper .wp-block-quote p' : '.sv100_sv_content_wrapper article .wp-block-quote p',
+	is_admin() ? '.editor-styles-wrapper .wp-block-quote p' : '.sv100_sv_content_wrapper article .wp-block-quote p, .sv100_sv_content_wrapper article .wp-block-quote p a',
 	array_merge(
 		$script->get_parent()->get_setting('font')->get_css_data('font-family'),
 		$script->get_parent()->get_setting('font_size')->get_css_data('font-size','','px'),
