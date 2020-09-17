@@ -15,9 +15,6 @@
 		public function init() {
 			$this->set_module_title( __( 'Block: Quote', 'sv100' ) )
 				->set_module_desc( __( 'Settings for Gutenberg Block', 'sv100' ) )
-				->load_settings()
-				->load_settings_cite()
-				->register_scripts()
 				->set_section_title( $this->get_module_title() )
 				->set_section_desc( $this->get_module_desc() )
 				->set_section_type( 'settings' )
@@ -68,6 +65,8 @@
 				->set_title( __( 'Border', 'sv100' ) )
 				->set_is_responsive(true)
 				->load_type( 'border' );
+
+			$this->load_settings_cite();
 
 			return $this;
 		}
@@ -136,6 +135,10 @@
 		public function enqueue_scripts(): sv_block_quote {
 			if(!$this->has_block_frontend('quote')){
 				return $this;
+			}
+
+			if(!is_admin()){
+				$this->load_settings()->register_scripts();
 			}
 			
 			$this->get_script( 'common' )->set_is_enqueued();
