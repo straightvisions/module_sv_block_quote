@@ -38,13 +38,19 @@
 
 			$this->get_setting( 'text_color' )
 				->set_title( __( 'Text Color', 'sv100' ) )
-				->set_default_value( '#1e1e1e' )
+				->set_default_value( '30,30,30' )
 				->set_is_responsive(true)
 				->load_type( 'color' );
 
 			$this->get_setting( 'margin' )
 				->set_title( __( 'Margin', 'sv100' ) )
 				->set_is_responsive(true)
+				->set_default_value(array(
+					'top'		=> '10px',
+					'right'		=> 'auto',
+					'bottom'	=> '20px',
+					'left'		=> 'auto'
+				))
 				->load_type( 'margin' );
 
 			$this->get_setting( 'padding' )
@@ -85,7 +91,7 @@
 
 			$this->get_setting( 'cite_text_color' )
 				->set_title( __( 'Text Color', 'sv100' ) )
-				->set_default_value( '#1e1e1e' )
+				->set_default_value( '30,30,30' )
 				->set_is_responsive(true)
 				->load_type( 'color' );
 
