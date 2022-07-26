@@ -1,6 +1,6 @@
 <?php
 	echo $_s->build_css(
-		is_admin() ? '.editor-styles-wrapper .wp-block-quote__citation' : '.wp-block-quote cite',
+		'.wp-block-quote cite',
 		array_merge(
 			$module->get_setting('cite_font')->get_css_data('font-family'),
 			$module->get_setting('cite_font_size')->get_css_data('font-size','','px'),
